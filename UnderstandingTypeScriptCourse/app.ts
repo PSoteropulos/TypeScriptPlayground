@@ -1,4 +1,8 @@
 const add = (n1: number, n2: number) => {
+    // console.log(typeof(n1))
+    if (typeof n1 !== "number" || typeof n2 !== "number") { // this accomplishes the same thing non typescript way
+        throw new Error("Incorrect input type");
+    }
     return n1 + n2;
 };
 
