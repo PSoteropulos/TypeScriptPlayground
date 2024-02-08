@@ -1,5 +1,5 @@
 const add = (
-    n1: number,
+    n1: number, // the colon + type is 100% typescript and gets deleted when compiled in to js
     n2: number,
     showResult: boolean,
     resultPhrase: string
@@ -17,7 +17,9 @@ const add = (
 };
 
 const number1 = 5; //in js and ts all numbers are number- no int or float
-const number2 = 2.8;
+// const number1:number = 5; // this is bad practice, and redundant because above ts is able to accurately infer that number1 is not only a number but the number 5; if we wouldve used let it would still infer number type but not static value
+// let number1: number; // this however is good practice since the variable isnt actually initialized immediately
+const number2 = 2.8; // type inference
 const printResult = true;
 const resultPhrase = "Result is: ";
 
